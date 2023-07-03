@@ -1,0 +1,33 @@
+{%extends 'main/base.html'%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%block title %}Results{%endblock%}</title>
+  </head>
+  <body>
+    {%block content%}
+    <style type="text/css">
+      a {
+        color: #007bff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+      a:hover {
+        color: #ff0000;
+      }
+    </style>
+
+    <div>
+      <h1>{{calc}}</h1>
+
+      <div>
+        <h2>{{name}}{{result}}</h2>
+      </div>
+      <h1><a href="{% url 'home' %}">Go Back Home</a></h1>
+
+      {%endblock%}
+    </div>
+  </body>
+</html>

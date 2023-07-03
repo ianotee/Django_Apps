@@ -1,0 +1,76 @@
+{%extends 'main/base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{%block title%}Home{%endblock%}</title>
+  </head>
+  <body>
+    
+    {%block content%}
+<style type="text/css">
+      form {
+        width: 300px;
+        margin: 0 auto;
+      }
+      form select,
+      form input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form select {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        background: #fff url("path/to/arrow-icon.png") no-repeat right center;
+        background-size: 20px;
+      }
+      form select option {
+        padding: 10px;
+        background-color: #fff;
+        color: #333;
+      }
+      form input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      form input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+      <div>
+      <h1>{{name}}</h1>
+      <form action="operation" method="GET">
+        <label>Value 1</label>
+        <input type="text" name="num1" />
+        <select name="opr">
+          <option value="+">+</option>
+          <option value="-">-</option>
+          <option value="*">*</option>
+          <option value="/">/</option>
+        </select>
+
+        <label>value 2</label>
+        <input type="text" name="num2" />
+
+        <br />
+        <br />
+
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
+
+      {%endblock%}
+    </div>
+  </body>
+</html>
